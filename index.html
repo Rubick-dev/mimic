@@ -14,42 +14,94 @@
     <h1>Mimic Me</h1>
 
     <div class="colours-div">
+
       <div class="colour-container red-colour-container">
         <div class="colour-div" id="colour-red"></div>
         <div>
-          <button class="button button-red" id="btn-red"></button>
+          <button class="colour-button button-red" id="btn-red" value="PLAY" onclick="playRed()"></button>
+          <audio id="audio-red" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></audio>
         </div>
       </div>
 
       <div class="colour-container blue-colour-container">
         <div class="colour-div" id="colour-blue"></div>
         <div>
-          <button class="button button-blue" id="btn-blue"></button>
+          <button class="colour-button button-blue" id="btn-blue" value="PLAY" onclick="playBlue()"></button>
+          <audio id="audio-blue" src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></audio>
         </div>
       </div>
 
       <div class="colour-container green-colour-container">
         <div class="colour-div" id="colour-green"></div>
         <div>
-          <button class="button button-green" id="btn-green"></button>
+          <button class="colour-button button-green" id="btn-green" value="PLAY" onclick="playGreen()"></button>
+          <audio id="audio-green" src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></audio>
         </div>
       </div>
 
-      <div class="colour-container yellow-colour-container">
+      <div class="colour-container yellow-colour-container" value="PLAY" onclick="playYellow()">
         <div class="colour-div" id="colour-yellow"></div>
         <div>
-          <button class="button button-yellow" id="btn-yellow"></button>
+          <button class="colour-button button-yellow" id="btn-yellow"></button>
+          <audio id="audio-yellow" src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></audio>
         </div>
       </div>
 
     </div> <!-- End of colours Div -->
 
-    <div class="info-div">
-      <div class="count">Count</div>
-      <div class="start">Start</div>
-      <div class="strict">Strict</div>
-      <div class="toggle">Game On Off Toggle</div>
-    </div>
+    <div class="info-div"> <!-- Start of info div -->
+      
+      <div class="game-information">
+        <div class="game-info-div">
+          <p>?<span class="info-msg"><span class="info-head">Information</span><br>
+            Step 1. Turn the Power on with the Power button slider.<br>
+              Step 2. Choose dififculty Mode between easy and hard.<br>
+              Step 3. Hit the Start button to begin game.<br>
+              Step 4. Input your selection by clicking the button below the circles.<br>
+              Step 5. The current count is the number of clicks you need to mimic.
+          </span></p>
+        </div>
+      </div>
+
+      <div class="count">
+        <p class="count-msg">Count:</p>
+        <p class="count-display">...</p>
+      </div>
+      
+      <div class="start">
+        <p class="start-msg">Start</p>
+        <button class="start-button"></button>
+      </div>
+      
+      <div class="strict"> <!-- Strict mode div -->
+        <p class="mode">Mode</p>
+        <div class="easy-msg-div">
+          <p class="easy-msg">Easy</p>
+        </div>
+        <label class="switch2">
+          <input type="checkbox"/>
+          <span class="slider2"></span>
+        </label>
+        <div class="hard-msg-div">
+          <p class="hard-msg">Hard</p>
+        </div>
+      </div> <!-- end of strict mode div-->
+      
+      <div class="toggle"> <!-- Power div -->
+        <p class="power">Power</p>
+        <div class="off-msg-div">
+          <p class="off-msg">Off</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox"/>
+          <span class="slider"></span>
+        </label>
+        <div class="on-msg-div">
+          <p class="on-msg">On</p>
+        </div>
+      </div>
+    
+    </div> <!-- End of Info Div -->
 
   </div> <!-- End of page container div -->
   

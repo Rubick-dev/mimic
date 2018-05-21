@@ -85,7 +85,7 @@ h1 {
   transform: scale(.8);
 }
 
-.button {
+.colour-button {
   min-width: 100%;
   height: 40px;
 }
@@ -122,22 +122,246 @@ h1 {
   cursor: pointer;
 }
 
-
 /* controller div */
 .info-div {
   margin: 5px 15% 5px 15%;
-  background: black;
+  background: url("woodbackground.jpg");
   color: white;
   display: flex;
-  height: 100px;
+  height: 100%;
   justify-content: space-around;
   text-align: center;
   align-items: center;
-  }
+  position: relative;  
+  font-size: 1.5rem;
+  margin-bottom: 100px;
+}
 
+
+/* The game selector display */
 .count,
 .start,
 .strict,
 .toggle {
   margin: 0 20px;
+}
+
+/* The info tab mouseover modal */
+.game-information {
+  position: absolute;
+  top: 1px;
+  left: 5px;
+}
+
+.game-info-div {
+  position: relative;
+}
+
+.game-info-div p {
+  border: 1px solid red;
+  width: 20px;
+  height: 23px;
+  float:left;
+  position:relative;
+  cursor:pointer;
+  margin-top: 2px;
+}
+
+.info-msg {
+  background:rgba(112, 127, 143, 0.97);
+  border: 5px solid black;
+  color: black;
+  font-size: .9rem;
+  height: 190px;
+  width: 500px;
+  letter-spacing: 1px;
+  line-height: 30px;
+  position: relative;
+  text-align: left;
+  text-transform: uppercase;
+  top: -280px;
+  left:50px;
+  display:none;
+  padding:0 20px;
+  -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1.5s; /* Firefox < 16 */
+   -ms-animation: fadein 1.5s; /* Internet Explorer */
+    -o-animation: fadein 1.5s; /* Opera < 12.1 */
+       animation: fadein 1.5s;
+
+}
+
+.info-head {
+  font-size: 2rem;
+}
+
+.game-info-div P:hover .info-msg {
+  opacity: 1;  
+  transition: opacity 0.5s 1s;
+  display:block;
+}
+
+
+/* The Count display styling */
+.count-msg {
+  margin-bottom: 0;
+}
+
+.count-display {
+  margin-top: 0;
+  margin:0;
+}
+
+/* The start button styling */
+.start-msg {
+  margin-bottom: 0;
+}
+
+.start-button {
+  background-color: rgb(248, 52, 52);
+  border-radius: 10px;
+  width: 80px;
+  height: 20px;
+}
+
+/* Game mode switch Button */
+.easy-msg,
+.easy-msg-div,
+.hard-msg,
+.hard-msg-div {
+  display: inline;
+  margin: 2px;
+}
+
+.strict {
+  justify-content: center;
+  align-content: center;
+}
+
+
+.mode {
+  margin-bottom: 0;
+}
+
+.switch2 {
+  position: relative;
+  width: 48px;
+  height: 22px;
+  display: inline-block;
+  background: #e5e5e5;
+}
+
+.switch2 input {
+  display: none;
+}
+
+.switch2 .slider2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(7, 185, 255);
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.switch2 .slider2::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  left: 2px;
+  top: 1px;
+  transition: all .3s;
+  border-radius: 3px;
+}
+
+.switch2 input:checked + .slider2 {
+  background-color: rgb(128, 0, 0);
+}
+
+.switch2 input:checked + .slider2::before {
+  left: 25px;
+}
+
+
+/* Power switch Button */
+.on-msg,
+.off-msg,
+.off-msg-div,
+.on-msg-div {
+  display: inline;
+  margin: 2px;
+}
+
+.toggle {
+  justify-content: center;
+  align-content: center;
+}
+
+.power {
+  margin-bottom: 0;
+}
+
+.switch {
+  position: relative;
+  width: 48px;
+  height: 22px;
+  display: inline-block;
+  background: #e5e5e5;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch .slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: red;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.switch .slider::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  left: 2px;
+  top: 1px;
+  transition: all .3s;
+  border-radius: 3px;
+}
+
+.switch input:checked + .slider {
+  background-color: green;
+}
+
+.switch input:checked + .slider::before {
+  left: 25px;
+}
+
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
