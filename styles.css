@@ -42,22 +42,22 @@ h1 {
 
 #colour-red:hover {
   background: red;
-  transform: scale(1);
+  /* transform: scale(1); */
 }
 
 #colour-blue:hover {
   background: Blue;
-  transform: scale(1);
+  /* transform: scale(1); */
 }
 
 #colour-green:hover {
   background: rgb(0, 255, 0);
-  transform: scale(1);
+  /* transform: scale(1); */
 }
 
 #colour-yellow:hover {
   background: yellow;
-  transform: scale(1);
+  /* transform: scale(1); */
 }
 
 .colour-div {
@@ -129,6 +129,7 @@ h1 {
   color: white;
   display: flex;
   height: 100%;
+  padding-bottom: 20px;
   justify-content: space-around;
   text-align: center;
   align-items: center;
@@ -188,7 +189,6 @@ h1 {
    -ms-animation: fadein 1.5s; /* Internet Explorer */
     -o-animation: fadein 1.5s; /* Opera < 12.1 */
        animation: fadein 1.5s;
-
 }
 
 .info-head {
@@ -365,4 +365,94 @@ h1 {
 @-webkit-keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }
+}
+
+@media only screen and (max-width: 339px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .colour-div {
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    border: 3px solid black;
+    border-radius: 50%;
+  }
+
+  /* controller div */
+  .info-div {
+    margin: 5px 5% 5px 5%;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: start;
+    font-size: .75rem;
+    margin-bottom: 80px;
+  }
+
+  .count,
+  .start,
+  .strict,
+  .toggle {
+    margin: 0 5px;
+  }
+
+  .count {
+    margin-left: 25px;
+  }
+
+  .game-info-div p {
+    border: 1px solid red;
+    width: 12px;
+    height: 15px;
+    font-size: .5rem;
+  }
+
+  .info-msg {
+    border: 2px solid black;
+    font-size: .5rem;
+    height: 200px;
+    width: 280px;
+    line-height: 20px;
+    top: -220px;
+    left: -20px;
+  }
+
+  .info-head {
+    font-size: 1.2rem;
+  }
+
+  .start-button {
+    width: 30px;
+    height: 10px;
+  }
+
+  .switch2 {
+    width: 24px;
+    height: 12px;
+  }
+
+  .switch2 .slider2::before {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .switch2 input:checked + .slider2::before {
+    left: 12px;
+  }
+
+  /* Power switch Button */
+  .switch {
+    width: 24px;
+    height: 12px;
+  }
+
+  .switch .slider::before {
+    width: 10px;
+    height: 10px;
+  }
+
+  .switch input:checked + .slider::before {
+    left: 12px;
+  }
 }

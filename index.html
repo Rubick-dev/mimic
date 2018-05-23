@@ -18,7 +18,7 @@
       <div class="colour-container red-colour-container">
         <div class="colour-div" id="colour-red"></div>
         <div>
-          <button class="colour-button button-red" id="btn-red" value="PLAY" onclick="playRed(event)"></button>
+          <button class="colour-button button-red" id="btn-red" value="1" disabled></button>
           <audio id="audio-red" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></audio>
         </div>
       </div>
@@ -26,7 +26,7 @@
       <div class="colour-container blue-colour-container">
         <div class="colour-div" id="colour-blue"></div>
         <div>
-          <button class="colour-button button-blue" id="btn-blue" value="PLAY" onclick="playBlue(event)"></button>
+          <button class="colour-button button-blue" id="btn-blue" value="2" disabled></button>
           <audio id="audio-blue" src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></audio>
         </div>
       </div>
@@ -34,7 +34,7 @@
       <div class="colour-container green-colour-container">
         <div class="colour-div" id="colour-green"></div>
         <div>
-          <button class="colour-button button-green" id="btn-green" value="PLAY" onclick="playGreen(event)"></button>
+          <button class="colour-button button-green" id="btn-green" value="3" disabled></button>
           <audio id="audio-green" src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></audio>
         </div>
       </div>
@@ -42,7 +42,7 @@
       <div class="colour-container yellow-colour-container">
         <div class="colour-div" id="colour-yellow"></div>
         <div>
-          <button class="colour-button button-yellow" id="btn-yellow" value="PLAY" onclick="playYellow(event)"></button>
+          <button class="colour-button button-yellow" id="btn-yellow" value="4" disabled></button>
           <audio id="audio-yellow" src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></audio>
         </div>
       </div>
@@ -79,7 +79,7 @@
           <p class="easy-msg">Easy</p>
         </div>
         <label class="switch2">
-          <input type="checkbox" onchange="gameMode()" id="gameModeEasyorHard"/>
+          <input type="checkbox" onchange="setGameMode()" id="gameModeEasyorHard"/>
           <span class="slider2"></span>
         </label>
         <div class="hard-msg-div">
