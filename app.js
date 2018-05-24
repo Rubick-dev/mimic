@@ -34,7 +34,10 @@ function playerClick(colour){
     console.log("true they are not equal");
     if (gameMode()) {
       console.log("Game is over as hard mode");
-      location.reload();
+      winningSound();
+      timeouts.push(setTimeout(function(){
+        location.reload();
+      }, 500));
     } else {
       repeatCompTurn = true;
       playerArray = [];

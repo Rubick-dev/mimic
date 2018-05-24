@@ -124,7 +124,7 @@ h1 {
 
 /* controller div */
 .info-div {
-  margin: 5px 15% 5px 15%;
+  margin: 5px 10% 5px 10%;
   background: url("woodbackground.jpg");
   color: white;
   display: flex;
@@ -367,15 +367,122 @@ h1 {
   to   { opacity: 1; }
 }
 
+
+@media only screen and (max-width: 821px) {
+
+  .colours-div {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 180px);
+    align-content: center;
+    justify-content: center;
+  }
+
+  .colour-container {
+    align-content: center;
+}
+
+  .colour-div  {
+    width: 120px;
+    height: 120px;
+    margin: 5px;
+    border: 3px solid black;
+    border-radius: 50%;
+  }
+
+  /* controller div */
+  .info-div {
+    margin: 5px 5% 5px 5%;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    margin-bottom: 80px;
+  }
+
+  .count,
+  .start,
+  .strict,
+  .toggle {
+    margin: 0 15px;
+  }
+
+  .count {
+    margin-left: 25px;
+  }
+
+  .game-info-div p {
+    border: 1px solid red;
+    width: 12px;
+    height: 12px;
+    font-size: .5rem;
+  }
+
+  .info-msg {
+    padding-top: 10px;
+    border: 2px solid black;
+    font-size: .75rem;
+    height: 230px;
+    width: 340px;
+    line-height: 25px;
+    top: -280px;
+    left: -10px;
+  }
+
+  .info-head {
+    font-size: 1.5rem;
+  }
+
+  .start-button {
+    width: 40px;
+    height: 15px;
+  }
+
+  .switch2 {
+    width: 34px;
+    height: 20px;
+  }
+
+  .switch2 .slider2::before {
+    width: 14px;
+    height: 18px;
+  }
+
+  .switch2 input:checked + .slider2::before {
+    left: 18px;
+  }
+
+  /* Power switch Button */
+  .switch {
+    width: 34px;
+    height: 20px;
+  }
+
+  .switch .slider::before {
+    width: 14px;
+    height: 18px;
+  }
+
+  .switch input:checked + .slider::before {
+    left: 18px;
+  }
+
+}
+
+
+
 @media only screen and (max-width: 450px) {
-    
+  
+  body {
+    min-width: 315px;
+  }
+  
   h1 {
     font-size: 2rem;
   }
 
   .colours-div {
       display: grid;
-      grid-template: repeat(2, 1fr) / repeat(2, 110px);
+      grid-template: repeat(2, 1fr) / repeat(2, 140px);
       align-content: center;
       justify-content: center;
   }
@@ -385,8 +492,8 @@ h1 {
   }
 
   .colour-div  {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     margin: 5px;
     border: 3px solid black;
     border-radius: 50%;
