@@ -20,7 +20,6 @@ var timeouts = [];
 var reset = false;
 
 
-
 // Functions
 // On button click by user, runs the game logic 
 function playerClick(colour){
@@ -131,7 +130,7 @@ function playAnimation(val) {
 };
 
 
-
+// The game on off switch
 function gameStatus(){
   if(onorOff.checked){
     console.log("box is now checked!");
@@ -154,6 +153,7 @@ function gameMode(){
   return gameDifficulty == 2 ? true : false;
 };
 
+// sets the difficulty of the game
 function setGameMode(){
   if (gameModeHTML.checked) {
     gameDifficulty = 2;
@@ -165,6 +165,7 @@ function setGameMode(){
 };
 
 
+// Starts the game after clicking hte start button
 function startGameNow(){
   resetGame();
   timeouts.push(setTimeout(function(){
@@ -220,18 +221,22 @@ function runComputersLogic(count){
 };
 
 
+// generates a random colour for the computer
 function getRandomColour(){
   return Math.floor((Math.random() * 4) + 1);
 };
 
+
+// plays all sounds at once /also is a losing sound
 function winningSound(){
-    for (let i = 1; i < 5; i++){
-      let iSound = i.toString();
+  for (let i = 1; i < 5; i++){
+    let iSound = i.toString();
     playSound(iSound);
   }
+};
 
-}
 
+// resets the game details without a hard page reload
 function resetGame(){
   winningSound();
   reset = true;
